@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#a0d7ff">
+
+    <!-- Add the TextView to display the entered expression -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Calculator Buttons -->
+        <GridLayout
+            android:id="@+id/calculatorGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:columnCount="4"
+            android:rowCount="5">
+
+            <!-- Row 1 -->
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="4"
+                android:layout_gravity="fill_horizontal"
+                android:background="#ebebeb"
+                android:padding="8dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textEnd"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnClearAll"
+                android:layout_columnSpan="2"
+                android:onClick="onClearAllClick"
+                android:text="Clear All"
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"
+                />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:onClick="onClearClick"
+                android:text="Clear"
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginRight="@dimen/cardview_compat_inset_shadow"/>
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:onClick="onOperatorClick"
+                android:text="/"
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"/>
+
+            <!-- Row 2 -->
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:onClick="onNumberClick"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:onClick="onNumberClick"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:onClick="onOperatorClick"
+                android:text="*"
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"/>
+
+            <!-- Row 3 -->
+            <Button
+                android:id="@+id/btn4"
+                android:onClick="onNumberClick"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:onClick="onNumberClick"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:onClick="onNumberClick"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/btnSubtract"
+                android:onClick="onOperatorClick"
+                android:text="-"
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"/>/>
+
+            <!-- Row 4 -->
+            <Button
+                android:id="@+id/btn1"
+                android:onClick="onNumberClick"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:onClick="onNumberClick"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:onClick="onNumberClick"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:onClick="onOperatorClick"
+                android:text="+"
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"/>/>
+
+            <!-- Row 5 -->
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="172dp"
+                android:layout_columnSpan="2"
+                android:onClick="onNumberClick"
+                android:text="0"
+                />
+
+
+            <Button
+                android:id="@+id/btnDecimal"
+                android:onClick="onNumberClick"
+                android:text="."
+                />
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:onClick="onEqualClick"
+                android:text="="
+                android:background="@drawable/btn_shape"
+                android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginTop="@dimen/cardview_compat_inset_shadow"/>/>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvEnteredExpression"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_above="@+id/calculatorGrid"
+            android:layout_marginBottom="1dp"
+            android:background="#ebebeb"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:backgroundTint="@color/white"
+            android:textAlignment="textEnd"/>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
